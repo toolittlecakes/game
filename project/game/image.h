@@ -15,21 +15,11 @@ struct Image {
     int width;
     int heights;
 
-    Image(const std::string &filename) {
-        texture.loadFromFile(filename);
-        texture.setSmooth(true);
-        width = texture.getSize().x;
-        heights = texture.getSize().y;
-    }
+    explicit Image(const std::string &filename);
 
-    sf::Texture &getTexture() {
-        return texture;
-    }
+    const sf::Texture &getTexture() const;
 
-    sf::Sprite getSprite() {
-        sf::Sprite sprite(texture);
-        return sprite;
-    }
+    sf::Sprite getSprite() const;
 };
 
 #endif //GAME_IMAGE_H

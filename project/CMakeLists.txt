@@ -18,5 +18,5 @@ if(SFML_FOUND)
     message(STATUS "SFML_VERSION: ${SFML_VERSION}")
 endif()
 
-add_executable(SFMLApp main.cpp  game/Game.h game/level.cpp game/level.h game/Map.cpp game/Map.h game/image.cpp game/image.cpp game/image.h io/input.cpp io/input.h io/output.cpp io/output.h game/object.cpp game/object.h)
+add_executable(SFMLApp main.cpp  game/Game.h game/levels/level.h game/Map.cpp game/Map.h game/image.cpp game/image.cpp game/image.h io/input.cpp io/input.h io/output.cpp io/output.h game/object.cpp game/object.h game/levels/level1.cpp game/levels/level1.h)
 target_link_libraries (SFMLApp sfml-graphics sfml-window sfml-system)
